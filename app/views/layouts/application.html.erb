@@ -11,10 +11,12 @@
   </head>
 
   <body>
-  <div class="navbar">
-    <%= link_to "Wikinimous Clone", articles_path %>
-    <%= link_to "Create an Article", new_article_path %>
-  </div>
-    <%= yield %>
+    <nav class="navbar navbar navbar-dark bg-dark">
+      <%= link_to "Wikinimous Clone", articles_path %>
+      <%= link_to "Create an Article", new_article_path %>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
