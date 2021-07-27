@@ -1,0 +1,13 @@
+<h1>Article#index</h1>
+<div class="containers">
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article_path(article.id) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+<%= link_to "Create an Article", new_article_path %>

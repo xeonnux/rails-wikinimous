@@ -1,0 +1,17 @@
+<h1>
+  <%= @article.title %>
+</h1>
+<div class="containers">
+  <p>
+    Content: <%= @article.content %>
+  </p>
+</div>
+<ul>
+  <li class="btn btn-primary">
+    <%= link_to "Update Article", edit_article_path %>
+  </li>
+  <li class="btn btn-primary">
+    <%= link_to "Delete Article", article_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+  </li>
+</ul>
+
