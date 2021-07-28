@@ -1,14 +1,17 @@
 <h1>Update Article</h1>
 
-<%= form_for(@article) do |f| %>
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :content %>
-    <%= f.text_field :content, :size=>"100"%>
-  </p>
-
-  <%= f.submit %>
-<% end %>
+<div class="container d-flex justify-content-center">
+  <%= form_for(@article) do |f| %>
+    <p>
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title, :size => "100%" %>
+    </p>
+    <p>
+      <%= f.label :content %>
+      <br>
+      <%= f.text_area(:content, :size => "100x10") %>
+    </p>
+    <%= f.submit %>
+  <% end %>
+</div>

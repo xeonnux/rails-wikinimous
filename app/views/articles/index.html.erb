@@ -1,12 +1,14 @@
-<h1>Article#index</h1>
-<div class="containers">
-  <ul class="list-group list-group-flush w-50">
+<div class="container bg-light">
+<h1 class="pl-3">Index of Articles</h1>
+  <ul class="list-group list-group-flush w-100">
     <% @articles.each do |article| %>
       <li class="list-group-item">
         <h2>
-          <%= link_to article.title, article_path(article.id) %>
+          <%= link_to article.title, article_path(article.id), class: "link_heads" %>
         </h2>
-        <p><%= article.content[0..100] %></p>
+        <p>
+          <%= article.content[0..100] %>
+        </p>
       </li>
     <% end %>
   </ul>

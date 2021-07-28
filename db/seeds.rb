@@ -9,7 +9,7 @@ require 'faker'
 
 puts 'Generating Articles...'
 
-100.times do 
+100.times do
   article = Article.new(
     title: Faker::Lorem.word,
     content: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)

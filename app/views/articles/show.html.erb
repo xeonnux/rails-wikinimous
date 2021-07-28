@@ -1,17 +1,17 @@
 <h1>
   <%= @article.title %>
 </h1>
-<div class="containers">
+<div class="card bg-light p-3 my-3 ">
   <p>
     Content: <%= @article.content %>
   </p>
 </div>
 <ul>
-  <li class="btn btn-primary">
-    <%= link_to "Update Article", edit_article_path %>
+  <li class="btn btn-grey m-2">
+    <%= link_to "Update Article", edit_article_path, class: "link" %>
   </li>
-  <li class="btn btn-primary">
-    <%= link_to "Delete Article", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+  <li class="btn btn-grey">
+    <%= link_to "Delete Article", article_path(@article), class: "link", method: :delete, data: { confirm: "Are you sure?" } %>
   </li>
 </ul>
 
